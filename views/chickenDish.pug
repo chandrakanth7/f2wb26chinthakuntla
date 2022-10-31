@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+    h1=title 
+    - let results = [{"dishName": "chicken fry", "dishPrice": 12.72, "mainIngredient": "chicken"},{"dishName": "chicken popcorn", "dishPrice": 4.12, "mainIngredient": "Corn"},{"dishName": "Chicken biryani", "dishPrice": 18.72, "mainIngredient": "Rice"}]
+    div.container-fluid 
+        div.row 
+            each item in results
+                .col-sm-2  Dish: #{item["dishName"]} <br> Price: #{item["dishPrice"]} <br> Main Ingredient: #{item["mainIngredient"]}
